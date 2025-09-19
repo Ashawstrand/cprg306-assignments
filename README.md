@@ -14,7 +14,7 @@ npm install
 3.Run the Development Server
 npm run dev
 
-Open [http://localhost:3000](http://localhost:3000) with your browser.
+4.Open [http://localhost:3000](http://localhost:3000) with your browser.
 
 USAGE:
 
