@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+CPRG 306: WEB DEVELOPMENT 2 - ASSIGNMENTS
 
-## Getting Started
+This repository contains all weekly assignments for the CPRG 306: Web Development 2 SAIT course. Each assignment builds upon an initiated Next.js project.
 
-First, run the development server:
+INSTALLATION:
 
-```bash
+1.Clone Repository
+git clone https://github.com/YOUR_USERNAME/cprg306-assignments.git
+cd cprg306-assignments
+
+2.Install dependencies
+npm install
+
+3.Run the Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+USAGE:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visit the root page to see an overview and link to each week's assignments.
 
-## Learn More
+CONTRIBUTING:
 
-To learn more about Next.js, take a look at the following resources:
+This repository is currently part of a personal coursework submission that is open to the instructor of the course.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+CREDITS:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Course - CPRG 306: Web Development 2
+Instructor - Ashlyn Knox
+Framework - Next.js
+Student - Ashley Shaw-Strand
 
-## Deploy on Vercel
+LICENSE:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is open source and available under the [MIT License] (LICENSE).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
