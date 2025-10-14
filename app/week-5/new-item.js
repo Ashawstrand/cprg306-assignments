@@ -3,23 +3,27 @@ import { useState } from "react";
 
 export default function NewItem() {
 
+    //state variables for storing fields
     const [name, setName] = useState("");
     const [quantity, setQuantity] = useState(1);
     const [category, setCategory] = useState("produce");
 
-
+    //function that increases quantity
     const increment = () => {
         setQuantity((prev) => Math.min(prev + 1, 20));
     };
 
+    //function that decreases quantity
     const decrement = () => {
         setQuantity((prev) => Math.max(prev - 1, 1));
     }
 
+    //form submission handler, prevents default form submission
     const handleSubmit = (e) => {
         e.preventDefault();
     }
 
+    //create item object with state values
     const item = {
         name,
         quantity,
@@ -30,7 +34,7 @@ export default function NewItem() {
     alert(`Item submitted:\nName: ${name}\nQuantity: ${quantity}\nCategory: ${category}`);
 
 
-    //Reset Form
+    //Reset Form to initial values
     setName("");
     setQuantity(1);
     setCategory("produce");
@@ -66,8 +70,15 @@ export default function NewItem() {
                 <option value="dairy">Dairy</option>
                 <option value="bakery">Bakery</option>
                 <option value="meat">Meat</option>
-                <option value="frozen">Frozen</option>
+                <option value="frozen">Frozen Foods</option>
+                <option value="canned">Canned Goods</option>
+                <option value="dry">Dry Goods</option>
+                <option value="beverages">Beverages</option>
+                <option value="snacks">Snacks</option>
+                <option value="household">Household</option>
+                <option value="other">Other</option>
                 </select>
+
             <button type="submit" className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-500">
                 Submit Item
             </button>
