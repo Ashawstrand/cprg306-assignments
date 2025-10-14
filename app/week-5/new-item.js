@@ -21,14 +21,15 @@ export default function NewItem() {
     //form submission handler, prevents default form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-    }
+    
 
     //create item object with state values
     const item = {
         name,
         quantity,
-        category,
+        category
     };
+    
 
     console.log("Submitted item:", item);
     alert(`Item submitted:\nName: ${name}\nQuantity: ${quantity}\nCategory: ${category}`);
@@ -39,32 +40,31 @@ export default function NewItem() {
     setQuantity(1);
     setCategory("produce");
 
+};
+
     return (
         <form onSubmit={handleSubmit} className="bg-white mx-auto max-w-sm mt-16 p-4 rounded shadow">
-            <h2 className="text-gray-800 font-bold text-xl text-center mb-4">Add New Item</h2>
-            <label className="block mb-2 text-gray-700 font-medium">Name:</label>
+            <label className="block mb-2 text-gray-700 font-bold">Item Name:</label>
             <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full p-2 border rounded mb-4"
+                className="w-full p-2 border text-black rounded mb-4"
                 required
             />
 
-
-        <div className="bg-white mx-auto max-w-sm mt-16 p-2 rounded">
-            <label className="text-gray-800 font-bold text-xl text-center m-4">Quantity: {quantity}</label>
+            <p className="text-gray-800 font-bold text-xl text-center m-4">Quantity: {quantity}</p>
             <div className="flex justify-center">
-            <button className="bg-purple-600 m-3 text-xl text-white h-12 w-12 rounded hover:bg-purple-400" onClick={decrement}>-</button>
-            <button className="bg-blue-600 m-3 text-xl text-white h-12 w-12 rounded hover:bg-blue-500" onClick={increment}>+</button>
+            <button type="button" className="bg-gray-400 m-3 text-xl text-white h-12 w-12 rounded hover:bg-gray-300" onClick={decrement}>-</button>
+            <button type="button" className="bg-blue-600 m-3 text-xl text-white h-12 w-12 rounded hover:bg-blue-500" onClick={increment}>+</button>
             </div>
-            <p className="text-gray-800 text-lg text-center m-4">Allowed range: 1-20</p>
+            <p className="text-gray-800 text-lg text-center m-4 mb-8">Allowed range: 1-20</p>
 
-            <label className="block mb-2 text-gray-700 font-medium">Category:</label>
+            <label className="block mb-2 text-gray-700 font-bold">Category:</label>
             <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full p-2 border rounded mb-6">
+                className="w-full p-2 border rounded text-black mb-6">
 
                 <option value="produce">Produce</option>
                 <option value="dairy">Dairy</option>
@@ -82,7 +82,6 @@ export default function NewItem() {
             <button type="submit" className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-500">
                 Submit Item
             </button>
-        </div>
         </form>
     );
 }
