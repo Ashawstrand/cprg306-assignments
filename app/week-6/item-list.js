@@ -24,7 +24,8 @@ ${sortBy === type? "bg-blue-500 text-white" : "bg-gray-200 text-black"}`;
 
 return (
   <div className="max-w-md mx-auto mt-6">
-    <div className="mb-4 flex justify-center">
+    <div className="mb-4 flex items-center justify-center space-x-2">
+      <p className="font-medium">Sort By: </p>
       <button className={getButtonStyle("name")}
       onClick={() => setSortBy("name")}>
         Name
