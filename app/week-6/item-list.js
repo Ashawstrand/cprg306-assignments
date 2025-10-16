@@ -35,9 +35,9 @@ return (
       </button>
     </div>
     <ul className="max-w-md mx-auto mt-6">
-        {sortedItems.map((item, index) => (
+        {sortedItems.map((item) => (
           <Item
-            key={index}
+            key={item.id}
             name={item.name}
             quantity={item.quantity}
             category={item.category}
