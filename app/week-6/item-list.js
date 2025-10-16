@@ -19,13 +19,13 @@ const sortedItems = [...items].sort((a, b) => {
 });
 
 const getButtonStyle = (type) =>
-  `px-4 py-2 rounded-md mr-2
-${sortBy === type? "bg-blue-500 text-white" : "bg-gray-200 text-black"}`;
+  `px-4 py-2 rounded-md mr-2 cursor-pointer
+${sortBy === type? "bg-blue-500 text-white hover:bg-blue-400" : "bg-gray-200 text-black hover:bg-gray-50"}`;
 
 return (
   <div className="max-w-md mx-auto mt-6">
     <div className="mb-4 flex items-center justify-center space-x-2">
-      <p className="font-medium">Sort By: </p>
+      <p className="font-bold">Sort By: </p>
       <button className={getButtonStyle("name")}
       onClick={() => setSortBy("name")}>
         Name
