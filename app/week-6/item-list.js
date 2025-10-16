@@ -1,9 +1,10 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Item from './item';
 import items from './items.json';
 
 const ItemList = () => {
-const [itemList, setItemList] = useState(items);
 const [sortBy, setSortBy] = useState("name");
 
 //sorted copy of items array.
@@ -17,10 +18,24 @@ const sortedItems = [...items].sort((a, b) => {
   return 0;
 });
 
+const getButtonStyle = (type) =>
+  `px-4 py-2 rounded-md mr-2
+${sortBy === type? "bg-blue-500 text-white" : "bg-gray-200 text-black"}`;
 
 return (
+  <div className="max-w-md mx-auto mt-6">
+    <div className="mb-4 flex justify-center">
+      <button className={getButtonStyle("name")}
+      onClick={() => setSortBy("name")}>
+        Name
+      </button>
+      <button className={getButtonStyle("category")}
+      onClick={() => setSortBy("category")}>
+        Category
+      </button>
+    </div>
     <ul className="max-w-md mx-auto mt-6">
-        {items.map((item, index) => (
+        {sortedItems.map((item, index) => (
           <Item
             key={index}
             name={item.name}
@@ -28,7 +43,8 @@ return (
             category={item.category}
           />
         ))}
-    </ul>
+        </ul>
+      </div>
 );
 };
 
