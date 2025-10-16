@@ -4,6 +4,7 @@ import items from './items.json';
 
 const ItemList = () => {
 const [itemList, setItemList] = useState(items);
+const [sortBy, setSortBy] = useState("name");
 
 
 return (
