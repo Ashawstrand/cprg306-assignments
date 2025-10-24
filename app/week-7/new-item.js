@@ -1,7 +1,8 @@
 'use client';
+
 import { useState } from "react";
 
-export default function NewItem() {
+export default function NewItem({ onAddItem }) {
 
     //state variables for storing fields
     const [name, setName] = useState("");
@@ -25,15 +26,14 @@ export default function NewItem() {
 
     //create item object with state values
     const item = {
+        id: Math.random().toString(36).substr(2,9),
         name,
         quantity,
         category
     };
     
-
-    console.log("Submitted item:", item);
-    alert(`Item submitted:\nName: ${name}\nQuantity: ${quantity}\nCategory: ${category}`);
-
+    //onAddItem prop function
+    onAddItem(item);
 
     //Reset Form to initial values
     setName("");
