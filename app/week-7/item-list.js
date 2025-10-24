@@ -2,9 +2,8 @@
 
 import React, { useState } from 'react';
 import Item from './item';
-import items from './items.json';
 
-const ItemList = () => {
+const ItemList = ({ items }) => {
 const [sortBy, setSortBy] = useState("name");
 
 //sorted copy of items array.
@@ -35,6 +34,7 @@ return (
         Category
       </button>
     </div>
+    
     <ul className="max-w-md mx-auto mt-6">
         {sortedItems.map((item) => (
           <Item
