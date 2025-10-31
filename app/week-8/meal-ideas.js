@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 
-// Function to fetch meal ideas from TheMealDB API
 async function fetchMealIdeas(ingredient) {
   if (!ingredient) return [];
 
@@ -21,14 +20,16 @@ async function fetchMealIdeas(ingredient) {
 export default function MealIdeas({ ingredient }) {
   const [meals, setMeals] = useState([]);
 
-  // Function to load meal ideas and update state
   async function loadMealIdeas() {
     const mealResults = await fetchMealIdeas(ingredient);
     setMeals(mealResults);
   }
 
-  // Re-run loadMealIdeas whenever the ingredient changes
   useEffect(() => {
+    async function loadMealIdeas() {
+      const mealResults = await fetchMealIdeas(ingredient);
+      setMeals(mealResults);
+    }
     loadMealIdeas();
   }, [ingredient]);
 
@@ -39,7 +40,9 @@ export default function MealIdeas({ ingredient }) {
       </h2>
 
       {meals.length === 0 ? (
-        <p className="text-gray-500">No meal ideas found. Try another ingredient.</p>
+        <p className="text-gray-500">
+          No meal ideas found. Try another ingredient.
+        </p>
       ) : (
         <ul className="list-disc list-inside space-y-2">
           {meals.map((meal) => (
