@@ -42,7 +42,7 @@ export default function MealIdeas({ ingredient }) {
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {meals.map((meal) => (
             <li key={meal.idMeal} 
-                className="bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition">
+                className="bg-black rounded-lg p-4 shadow hover:shadow-md transition flex flex-col items-center">
               <img
               src={meal.strMealThumb}
               alt={meal.strMeal}
