@@ -2,7 +2,7 @@ import React from 'react';
 
 const Item = ({name, quantity, category, onSelect}) => {
     return (
-      <li className="bg-black border border-white rounded-md p-4 mb-2"
+      <li className="bg-black border border-white rounded-md p-4 mb-2 cursor-pointer"
           onClick={() => onSelect && onSelect({name, quantity, category})}
       >
         <div className="text-lg font-semibold text-white">{name}</div>
