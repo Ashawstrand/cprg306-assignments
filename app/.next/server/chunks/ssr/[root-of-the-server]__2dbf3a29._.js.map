@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///C:/CPRG306/cprg306-assignments/app/week-2/student-info.js"],"sourcesContent":["'use client';\r\n\r\nimport Link from 'next/link';\r\n\r\nexport default function StudentInfo() {\r\n  return (\r\n    <div>\r\n      <p>Name: Ashley Shaw-Strand</p>\r\n      <p>\r\n          GitHub:{\" \"}\r\n          <Link href=\"https://github.com/Ashawstrand/cprg306-assignments\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n            Ashawstrand/cprg306-assignments   \r\n          </Link>\r\n      </p>\r\n    </div>\r\n    );\r\n}"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS;IACtB,qBACE,wQAAC;;0BACC,wQAAC;0BAAE;;;;;;0BACH,wQAAC;;oBAAE;oBACS;kCACR,wQAAC,iMAAI;wBAAC,MAAK;wBAAqD,QAAO;wBAAS,KAAI;kCAAsB;;;;;;;;;;;;;;;;;;AAMpH","debugId":null}},
-    {"offset": {"line": 78, "column": 0}, "map": {"version":3,"sources":["file:///C:/CPRG306/cprg306-assignments/app/week-2/page.js"],"sourcesContent":["'use client';\r\n\r\nimport StudentInfo from \"./student-info\";\r\n\r\nexport default function Page() {\r\n  return (\r\n    <main>\r\n      <h1>Shopping List</h1>\r\n      <StudentInfo />\r\n    </main>\r\n  );\r\n}\r\n\r\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS;IACtB,qBACE,wQAAC;;0BACC,wQAAC;0BAAG;;;;;;0BACJ,wQAAC,wKAAW;;;;;;;;;;;AAGlB","debugId":null}}]
-}

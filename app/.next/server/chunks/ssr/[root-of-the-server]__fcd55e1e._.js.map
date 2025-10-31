@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///C:/CPRG306/cprg306-assignments/app/page.js"],"sourcesContent":["'use client';\n\nimport Link from 'next/link';\n\nexport default function Home() {\n  return(\n    <main>\n      <h1>CPRG 306: Web Development 2 - Assignments</h1>\n      <p>\n        <Link href=\"/week-2\">Go to Week 2  </Link>\n        <Link href=\"/week-3\"> -- Go to Week 3</Link>\n        <Link href=\"/week-4\"> -- Go to Week 4</Link>\n        <Link href=\"/week-5\"> -- Go to Week 5</Link>\n        <Link href=\"/week-6\"> -- Go to Week 6</Link>\n      </p>\n    </main>\n  );\n}"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS;IACtB,qBACE,wQAAC;;0BACC,wQAAC;0BAAG;;;;;;0BACJ,wQAAC;;kCACC,wQAAC,iMAAI;wBAAC,MAAK;kCAAU;;;;;;kCACrB,wQAAC,iMAAI;wBAAC,MAAK;kCAAU;;;;;;kCACrB,wQAAC,iMAAI;wBAAC,MAAK;kCAAU;;;;;;kCACrB,wQAAC,iMAAI;wBAAC,MAAK;kCAAU;;;;;;kCACrB,wQAAC,iMAAI;wBAAC,MAAK;kCAAU;;;;;;;;;;;;;;;;;;AAI7B","debugId":null}}]
-}
