@@ -39,9 +39,10 @@ export default function MealIdeas({ ingredient }) {
           No meal ideas found.
         </p>
       ) : (
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {meals.map((meal) => (
-            <li key={meal.idMeal} className="text-lg text-gray-700">
+            <li key={meal.idMeal} 
+                className="bg-gray-50 rounded-lg p-4 shadow hover:shadow-md transition">
               <img
               src={meal.strMealThumb}
               alt={meal.strMeal}
