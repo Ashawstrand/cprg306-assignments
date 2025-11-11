@@ -1,14 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useUserAuth } from "../../contexts/AuthContext";
+
 import NewItem from "./new-item";
 import ItemList from "./item-list";
 import itemsData from "./items.json";
 import MealIdeas from "./meal-ideas";
 
 const Page = () => {
+  const { user } = useUserAuth();
+  const router = useRouter();
+
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
+
+  useEffect(() => {
+    if (!user) {
+      router.push("/week-9");
+    }
+  }, [user, router]);
+
+  if (!user) return null;
 
   const handleAddItem = (newItem) => {
     setItems((prevItems) => [...prevItems, newItem]);
