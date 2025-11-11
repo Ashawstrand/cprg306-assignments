@@ -46,7 +46,7 @@ export default function LandingPage() {
                         Logout
                         </button>
                         <Link
-                            href="/app/week-9/shopping-list/page.js"
+                            href="/week-9/shopping-list"
                             className="text-blue-600 underline hover:text-blue-800"
                             >
                                 Go to Shopping List
