@@ -9,7 +9,7 @@ import { useUserAuth } from "../../contexts/AuthContext";
 import NewItem from "./new-item";
 import ItemList from "./item-list";
 import MealIdeas from "./meal-ideas";
-import {getItems, addItem } from "../../_services/shopping-list-service";
+import {getItems, addItem } from "../../../_services/shopping-list-service";
 
 const Page = () => {
   const { user } = useUserAuth();
@@ -77,3 +77,4 @@ const Page = () => {
 };
 
 export default Page;
+
